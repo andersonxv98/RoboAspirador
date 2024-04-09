@@ -1,0 +1,26 @@
+
+mas my1st_app {
+
+    agent aspiradorA: aspirador.asl{
+        beliefs: direita
+                posicao(0,0)
+                name("aspiradorA")
+                agenteSubordinado(aspiradorB)
+        goals: starting
+            procurarLixo
+        focus: salas.salas
+    }
+
+    agent aspiradorB {
+        beliefs: posicao(0,0)
+                name("aspiradorB")
+        goals: starting
+        focus: salas.salas
+    
+    }
+    
+    workspace salas {
+        artifact salas: salasAspiradorRobo.Salas(3)
+    }
+
+}

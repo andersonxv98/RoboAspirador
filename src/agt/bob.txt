@@ -1,0 +1,12 @@
++greeting(M)[source(A)] <-  // plan to react to new beliefs
+    .print("I received ",M," from ",A).
+
+// some usual includes for JaCaMo projects:
+{ include("$jacamo/templates/common-cartago.asl") }
+{ include("$jacamo/templates/common-moise.asl") }
+{ include("$moise/asl/org-obedient.asl") }
+
+
+[M(0)]
+[MG(2), MR(8)]
+[MGD(6), MRO(9), MGI(10), MRU(10)]
